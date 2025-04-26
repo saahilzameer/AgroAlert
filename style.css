@@ -1,0 +1,22 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eef5f1;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #2e8b57;
+}
+
+select, button {
+  margin: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+#weatherInfo {
+  margin-top: 20px;
+  font-size: 18px;
+}
