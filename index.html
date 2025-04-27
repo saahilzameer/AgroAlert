@@ -1,32 +1,54 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AgroAlert - Farmer's Regional Alert System</title>
+  <title>AgroAlert Pro - Regional Agricultural Alerts</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>AgroAlert - Farmer's Regional Alert System</h1>
+  <div id="spinner" class="spinner" style="display:none;"></div>
+  <img src="logo.png" alt="AgroAlert Logo" class="logo">
+  <h1>AgroAlert Pro 🌾</h1>
 
-  <select id="regionSelect">
-    <option value="Hyderabad">Hyderabad</option>
-    <option value="Vijayawada">Vijayawada</option>
-    <option value="Guntur">Guntur</option>
-  </select>
+  <div class="container">
+    <div class="region-selector">
+      <h2>Select a Region</h2>
+      <select id="regionSelect">
+        <option value="Coastal Delta">Coastal Delta (Andhra Pradesh)</option>
+        <option value="Northern Plains">Northern Plains (Punjab)</option>
+        <option value="Central Highlands">Central Highlands (Madhya Pradesh)</option>
+        <option value="Western Plateau">Western Plateau (Maharashtra)</option>
+        <option value="Eastern Plains">Eastern Plains (West Bengal)</option>
+      </select>
+      <button onclick="getWeather()">Get Agricultural Info</button>
+    </div>
 
-  <button onclick="getWeather()">Get Weather Alert</button>
+    <div class="weather-info" id="weatherInfo">
+      <h2>Weather Forecast</h2>
+      <p>Temperature: --</p>
+      <p>Humidity: --</p>
+      <p>Wind: --</p>
+      <p>Condition: --</p>
+    </div>
 
-  <div id="weatherInfo"></div>
+    <div class="alerts" id="agriAlerts">
+      <h2>Agricultural Alerts</h2>
+      <p>--</p>
+    </div>
 
-  <h2>Government Schemes</h2>
-  <ul>
-    <li>PM-Kisan Samman Nidhi Yojana</li>
-    <li>Fasal Bima Yojana (Crop Insurance)</li>
-    <li>Soil Health Card Scheme</li>
-  </ul>
+    <div class="schemes">
+      <h2>Govt. Schemes</h2>
+      <ul>
+        <li>PM-Kisan Samman Nidhi Yojana</li>
+        <li>Fasal Bima Yojana (Crop Insurance)</li>
+        <li>Soil Health Card Scheme</li>
+      </ul>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
 </html>
+
+
