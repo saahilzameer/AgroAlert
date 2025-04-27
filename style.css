@@ -1,22 +1,71 @@
-
 body {
   font-family: Arial, sans-serif;
-  background-color: #eef5f1;
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
   text-align: center;
-  padding: 20px;
+  margin: 0;
+  padding: 0;
+  backdrop-filter: brightness(0.9);
 }
 
 h1 {
-  color: #2e8b57;
+  background-color: rgba(46, 139, 87, 0.8);
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  padding: 20px;
+}
+
+.region-selector, .weather-info, .alerts, .schemes {
+  background: rgba(255, 255, 255, 0.9);
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
 }
 
 select, button {
-  margin: 10px;
   padding: 10px;
+  margin: 10px;
   font-size: 16px;
 }
 
-#weatherInfo {
+button {
+  background-color: #2e8b57;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #246b45;
+}
+
+ul {
+  text-align: left;
+}
+
+.logo {
+  width: 100px;
   margin-top: 20px;
-  font-size: 18px;
+}
+
+.spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #2e8b57;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
